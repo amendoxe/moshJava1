@@ -34,7 +34,7 @@ public class Mortgage {
 
     public double calcula() {
         double P = getCantidad();
-        double r = getAnnualIRate() / 1200;
+        double r = getAnnualIRate() / 12 / 100;
         double n = getYears() * 12;
         double numPow = Math.pow((1 + r), n);
         double m = P * ((r * numPow) / (numPow - 1));
